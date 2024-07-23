@@ -4,17 +4,59 @@ from PIL import Image
 
 page = st.sidebar.radio('我的首页', ['我的兴趣推荐', '我的图片处理工具', '我的智慧词典', '我的留言区'])
 
-def page_1():
-    '''我的推荐'''
-    st.write('我的电影推荐')
-    st.write('-----------------------------')
-    st.write('我的游戏推荐')
-    st.write('-----------------------------')
-    st.write('我的书籍推荐')
-    st.write('-----------------------------')
-    st.write('我的习题集推荐')
-    st.write('-----------------------------')
-
+ef page_1():
+    '''我的兴趣推荐'''
+    with open(r'd:\Users\Administrator\Desktop\第一课工程包\霞光.mp3', 'rb') as f:
+        mymp3 = f.read()
+    st.audio(mymp3, format='audio/mp3', start_time=0)
+    st.write('我的好书推荐:《装在口袋里的爸爸》')
+    st.write('下面电影哪个是作者想推荐的？')
+    cb1 = st.checkbox('A.流浪地球')
+    cb2 = st.checkbox('B.爸爸是外星人')
+    cb3 = st.checkbox('C.中国机长')
+    cb4 = st.checkbox('D.熊出没之狂野大陆')
+    b1 = st.button('第1题答案')
+    if b1:
+        if cb1 == True and cb2 == False and cb3 == False and cb4 == False:
+            st.write('回答正确！')
+        else:
+            st.write('再想想')
+    st.write('---------------------')
+    st.write('下面游戏哪个是作者想推荐的？')
+    cb1 = st.checkbox('A.王者荣耀')
+    cb2 = st.checkbox('B.蛋仔派对')
+    cb3 = st.checkbox('C.开心消消乐')
+    cb4 = st.checkbox('D.和平精英')
+    b2 = st.button('第2题答案')
+    if b2:
+        if cb1 == False and cb2 == True and cb3 == False and cb4 == False:
+            st.write('回答正确！')
+        else:
+            st.write('再想想')
+    st.write('---------------------')
+    st.write('下面音乐哪个是作者想推荐的？')
+    cb1 = st.checkbox('A.踏山河')
+    cb2 = st.checkbox('B.莫问归期')
+    cb3 = st.checkbox('C.九九八十一')
+    cb4 = st.checkbox('D.大香蕉')
+    b3 = st.button('第3题答案')
+    if b3:
+        if cb1 == False and cb2 == False and cb3 == False and cb4 == True:
+            st.write('回答正确！')
+        else:
+            st.write('再想想')
+    st.write('---------------------')
+    st.write('下面书名哪个是作者想推荐的？')
+    cb1 = st.checkbox('A.装在口袋里的爸爸')
+    cb2 = st.checkbox('B.三国演义')
+    cb3 = st.checkbox('C.爱的教育')
+    cb4 = st.checkbox('D.宝葫芦的秘密')
+    b4 = st.button('第4题答案')
+    if b4:
+        if cb1 == True and cb2 == False and cb3 == False and cb4 == False:
+            st.write('回答正确！')
+        else:
+            st.write('再想想')
 def page_2():
     '''我的图片处理工具'''
     st.write(":sunglasses:图片换色小程序:sunglasses:")
