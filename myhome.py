@@ -4,7 +4,7 @@ from PIL import Image
 
 page = st.sidebar.radio('我的首页', ['我的兴趣推荐', '我的图片处理工具', '我的智慧词典', '我的留言区'])
 
-ef page_1():
+def page_1():
     '''我的兴趣推荐'''
     with open(r'd:\Users\Administrator\Desktop\第一课工程包\霞光.mp3', 'rb') as f:
         mymp3 = f.read()
