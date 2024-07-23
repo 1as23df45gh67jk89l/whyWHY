@@ -6,8 +6,6 @@ page = st.sidebar.radio('我的首页', ['我的兴趣推荐', '我的图片处�
 
 def page_1():
     '''我的兴趣推荐'''
-    with open(r'd:\Users\Administrator\Desktop\第一课工程包\霞光.mp3', 'rb') as f:
-        mymp3 = f.read()
     st.audio(mymp3, format='audio/mp3', start_time=0)
     st.write('我的好书推荐:《装在口袋里的爸爸》')
     st.write('下面电影哪个是作者想推荐的？')
